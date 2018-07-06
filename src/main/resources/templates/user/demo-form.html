@@ -1,0 +1,79 @@
+<%layout("/public/layout.html"){ %>
+
+   <div class="j-nav-location-bar">
+					<span class="title title-1" >用户模块</span>-<span class="title title-2" >用户管理</span>-<span
+						class="title title-3">样例表单</span>
+	</div>
+	
+	<!-- layui-card-wapper -->
+     <!-- 表单部分 -->
+  	<form class="layui-form layui-form-card form01" action="/user/demoForm/do"  method="post">
+  	
+	<div class="layui-card-wapper" >
+			<!-- layui-card -->
+			<div class="layui-card ">
+				 <!-- layui-card-body -->
+				  <div class="layui-card-body">
+				  		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+					   	<div class="layui-form-item">
+						    <label class="layui-form-label">字段1</label>
+						    <div class="layui-input-inline">
+						      <input  type="text" name="field1"  placeholder="输入正确的字段1" class="layui-input"    />
+						    </div>
+						    <div class="layui-form-mid layui-word-aux layui-form-item-hint">请填写6到18位字符</div>
+				   		</div>
+				   
+					   <div class="layui-form-item">
+						    <label class="layui-form-label">字段2</label>
+						    <div class="layui-input-inline">
+						      <input type="text"  name="field2"  placeholder="输入正确的字段2" class="layui-input"     errormsg="字段2与字段1不一致"/>
+						    </div>
+						    <div class="layui-form-mid layui-word-aux layui-form-item-hint">字段2必须与字段1一致</div>
+					   </div>
+				  </div>
+				 <!-- / layui-card-body -->
+				  <div class="layui-card-footer"><div class="layui-card-footer-btn-wapper"><button class="layui-btn"  id="btn_sub">提交</button></div></div>
+			</div>
+			<!-- / layui-card -->
+    </div>
+	<!-- layui-card-wapper -->
+	  </form>
+     <!--/ 表单部分 -->
+	
+	<script>
+		layui.use(['layer'], function() {
+			var layer_loading_index;
+			var form01 =	$(".form01").Validform({
+				btnSubmit:"#btn_sub", 
+				postonce:true,
+				tiptype:2,
+				ajaxPost:true,
+				datatype:{
+					"field2":function(gets,obj,curform,regxp){
+						var field1_v = curform.find('input[name=field]1').val() === undefined?'':curform.find('input[name=field1]').val();
+						if(field1_v != gets || field1_v == '') return false;
+						return true;
+					}
+				},
+				beforeCheck:function(curform){
+				},
+				beforeSubmit:function(curform){
+					layer_loading_index = layer.load(1, layer_loadding_config);
+				},
+				callback:function(data){
+					layer.close(layer_loading_index);
+					if(data.code == 1002){
+						layer.msg(data.message);
+						/* setTimeout(function(){
+							 location = "/user/list";
+							}, 4000); */
+					}
+				}
+			});
+			
+			var layer = layui.layer;
+		});
+		
+	</script>
+				
+  <% } %>

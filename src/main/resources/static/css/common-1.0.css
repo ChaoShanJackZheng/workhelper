@@ -1,0 +1,46 @@
+/* 导航定位条 */
+.j-nav-location-bar{font-weight:bold;margin-bottom:10px;color:#2C2C2C;}
+.j-nav-location-bar .title {font-weight:bold;margin:0 5px;}
+.j-nav-location-bar .title-3{font-size:20px;}
+.j-search-form-bar {foat:left;}
+.j-search-form-bar .j-form-group{display:inline-block;margin-right:20px;}
+.j-search-form-bar .j-form-label{padding:9px 0;width:auto;display:inline-block;}
+.j-search-form-bar .j-input-block{display:inline-block;margin-left:10px;}
+.j-search-form-bar .j-form-btn-group{float:right;}
+.j-search-condition-bar{padding:5px 15px;}
+.j-advanced-search-form-box2{padding-top:20px;padding-right:30px;}
+.j-advanced-search-form-box2 .layui-form-label {width: 90px;}
+.j-advanced-search-form-box2 .layui-input-block {margin-left: 140px;font-size:16px;}
+.j-w-150{width:150px;}
+.j-w-300{width:300px;}
+
+
+#j-search-condition-bar-inner .layui-badge{margin-right:5px;}
+
+.aggregated-data-box li{margin-bottom: 20px; background-color: #01AAED;height:60px;display: inline-block;vertical-align: middle;margin-left: 20px;margin-top: 20px;padding:5px;color: #fff;text-align: center;border-radius: 2px;line-height: 52px;}
+.aggregated-data-box .aggregated-data-label{font-size:12px;text-align:right;display: inline-block;font-style:normal;margin-right:10px;width:75px;line-height: 22px;}
+.aggregated-data-box .aggregated-data-value{display: inline-block;font-weight:bolder;font-size:24px;width:130px;height:60px;}
+.aggregated-data-table,.detailgegevens-data-table{font-weight:bolder;font-size:18px;text-align:center;padding-top:20px;padding-bottom:20px;background:#F2F2F2;}
+.detailgegevens-data-table{margin-top:40px;}
+
+
+.Jtable-th-style{background:#f2f2f2;}
+
+/* 图表盒 */
+.charts-box-tab {padding-top:20px;}
+.charts-box-tab .charts-box{ height: 400px;width:1050px;-moz-user-select: none; background-color: rgba(0, 0, 0, 0); cursor: default;overflow: hidden;padding : 10px; margin-bottom: 10px;border: 1px solid #e3e3e3;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);}
+
+
+/* 清除效果 */
+.j-font-clear-italic{font-style: normal;}
+
+
+/* 面板卡 */
+.layui-form-card .layui-card-wapper{padding: 20px; background-color: #F2F2F2;}
+.layui-form-card .layui-card-wapper .layui-card-body{padding-top:20px;}
+.layui-form-card .layui-card-wapper .layui-card-body  .layui-form-item-hint .Validform_checktip{margin-left:20px;}
+.layui-form-card .layui-card-wapper .layui-card-body  .layui-form-item-hint .Validform_right{color:#56B121}
+.layui-form-card .layui-card-wapper .layui-card-body  .layui-form-item-hint .Validform_wrong{color:red;}
+.layui-form-card .layui-card-wapper .layui-card-footer{line-height: 42px;padding: 0 15px;border-bottom: 1px solid #f6f6f6;color: #333;border-radius: 2px 2px 0 0;font-size: 14px;position: relative;}
+.layui-form-card .layui-card-wapper .layui-card-footer .layui-card-footer-btn-wapper{padding:20px;}
+.

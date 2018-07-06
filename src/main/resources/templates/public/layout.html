@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="_csrf" content="${_csrf.token}"/>
+    <meta name="_csrf_header" content="${_csrf.headerName}"/>
+    <title>多智云用户管理后台</title>
+	<link rel="stylesheet" href="/frame/layui/css/layui.css">
+	 <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/common-1.0.css">
+	<script src="/js/jquery1.42.min.js"></script>
+	<script src="/frame/layui/layui.js"></script>
+	<script src="/js/Validform_v5.3.2_min.js"></script>
+	<script src="/js/common.js"></script>
+</head>
+<body class="layui-layout-body">
+	<div class="layui-layout layui-layout-admin">
+		<% include("/public/header.html"){} %>
+		<% include("/public/side-menu.html"){} %>
+
+		<div class="layui-body">
+			<!-- 内容主体区域 -->
+			<div style="padding: 15px;">
+				${layoutContent}
+			</div>
+		</div>
+		<% include("/public/footer.html"){} %>
+	</div>
+	<script>
+	var table;
+		layui.use(['element', 'table'], function() {
+			var element = layui.element;
+			table = layui.table;
+			//console.log(table);
+			table.set({
+				 page:true,
+				limit:10,
+				response:{
+					statusName: 'code',
+					statusCode: '0000',
+					msgName: "message",
+					countName: 'data.count',
+					dataName: 'data.list'
+				}
+			} )
+			
+			
+		}); 
+	</script>
+	
+</body>
